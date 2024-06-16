@@ -9,7 +9,8 @@ export default defineConfig(({ mode }) => {
 		mode,
 		base: '/',
 		root: './src',
-		publicDir: './public',
+		publicDir: '../public',
+		assetsInclude: ["../public/assets/**/*"],
 		resolve: {
 			extensions: ['.ts', '.tsx'],
 		},

@@ -1,3 +1,3 @@
-export { default as goodsReducer } from './slice';
-export * from './slice';
-export type * from './slice.types';
+export { default as goodsReducer } from './goods';
+export * from './goods';
+export type * from './goods.types';
