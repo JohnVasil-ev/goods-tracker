@@ -1,0 +1,42 @@
+{
+	"extends": "./.config/typescript/typescript-checks.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"target": "ES5",
+		"module": "ESNext",
+		"jsx": "react-jsx",
+		"moduleResolution": "Bundler",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"types": ["vite/client"],
+
+		"composite": true,
+		"incremental": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"downlevelIteration": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"baseUrl": "./src",
+		"paths": {
+			"@/app/*": ["./app/*"],
+			"@/store/*": ["./store/*"],
+			"@/store": ["./store/index.ts"],
+			"@/pages/*": ["./pages/*"],
+			"@/shared/*": ["./shared/*"],
+			"@/widgets/*": ["./widgets/*"],
+			"@/features/*": ["./features/*"],
+		}
+	},
+	"include": [
+		".declarations/**/*",
+		"src/**/*",
+		"test/**/*",
+	],
+	"exclude": [
+		"dist",
+		"node_modules",
+		"src/**/*.spec.ts",
+		"src/**/*.story.ts"
+	]
+}
